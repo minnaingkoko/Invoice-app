@@ -1,0 +1,72 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.purpleButton {
+  @include button;
+  background: $purple;
+  color: white;
+
+  &:hover {
+    background: $heliotrope;
+  }
+}
+
+.lightBtn {
+  @include button;
+  background: #f9fafe;
+  color: $shipCove;
+
+  &:hover {
+    background: $selago;
+  }
+}
+
+.darkLightBtn {
+  @include button;
+  background: $ebony;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: $selago;
+  }
+}
+
+.orangeBtn {
+  @include button;
+  background: $burntSienna;
+  color: white;
+
+  &:hover {
+    background: #ff9797;
+  }
+}
+
+.darkBtn {
+  @include button;
+  background: #373b53;
+  color: $baliHai;
+
+  &:hover {
+    background: $vulcan;
+  }
+}
+
+.darkDarkBtn {
+  color: white;
+
+  &:hover {
+    background-color: $mirage;
+  }
+}
+
+.longBtn {
+  @include button;
+  background: #f9fafe;
+  color: $shipCove;
+  width: 100%;
+}
+
+.darkLongBtn {
+  background: $mirage;
+}

@@ -1,0 +1,21 @@
+@import "./variables";
+@import "./mixins";
+
+.main {
+  background-color: $whisper;
+  padding-bottom: 6rem;
+  padding-top: 6.5rem;
+  min-height: 100vh;
+  @media (min-width: $tablet) {
+    padding-top: 4.5rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 6.4375rem;
+    padding-top: 0;
+  }
+}
+
+.darkMain {
+  background-color: $mirage2;
+}

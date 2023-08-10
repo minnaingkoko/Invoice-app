@@ -1,0 +1,23 @@
+@import "./variables";
+@import "./mixins";
+
+.main {
+  position: relative;
+  background-color: $whisper;
+  min-height: 100vh;
+  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+
+  @media (min-width: $desktop) {
+    padding-left: 6.4375rem;
+    padding-top: 3rem;
+  }
+}
+
+.darkMain {
+  background: $mirage2;
+}
+
+.root {
+  padding: 1.5rem;
+}

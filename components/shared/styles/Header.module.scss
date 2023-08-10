@@ -1,0 +1,174 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+// <header> element
+.headerRoot {
+  background-color: $ebony;
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+  @media (min-width: $tablet) {
+  }
+
+  @media (min-width: $desktop) {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    width: 6.4375rem;
+    border-radius: 0px 20px 20px 0px;
+    flex-direction: column;
+    z-index: 3;
+  }
+}
+
+// left/top side logo
+.headerLogoRoot {
+  background-color: $purple;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 20px 20px 0px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  svg {
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 6.4375rem;
+    position: absolute;
+    background-color: $heliotrope;
+    border-radius: 20px 0px 0px 20px;
+    top: 50%;
+    transition: 0.3s ease;
+  }
+
+  &:hover::after {
+    top: 10%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    height: 6.4375rem;
+  }
+}
+
+// theme button and avatar wrapper
+.headerControls {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+}
+
+// button
+.themeToggleBtn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+
+  &:hover {
+    svg path {
+      fill: $selago;
+      transition: fill 0.1s ease-in-out;
+    }
+  }
+}
+
+.themeBtnWrapper {
+  border-right: 1px solid $darkAccent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  @media (min-width: $desktop) {
+    border-right: none;
+    border-bottom: 1px solid $darkAccent;
+  }
+}
+
+.themeBtnWrapper,
+.avatarWrapper {
+  min-width: 5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  @media (min-width: $tablet) {
+    width: 6rem;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    height: 5.5rem;
+  }
+}
+
+.avatarWrapper {
+  cursor: pointer;
+
+  &:hover {
+    img {
+      border: 3px solid $purple;
+    }
+  }
+}
+
+.avatarWrapper img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.popup {
+  min-width: 180px;
+  position: absolute;
+  background-color: white;
+
+  right: 15%;
+  top: 80%;
+  z-index: 40;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  ul {
+    list-style: none;
+
+    li:hover {
+      color: $purple;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  color: $vulcan;
+  @include normalText;
+  font-weight: bold;
+
+  @media (min-width: $desktop) {
+    top: 0%;
+    left: 105%;
+  }
+}
+
+.popupDark {
+  background-color: $mirage;
+  color: white;
+}
